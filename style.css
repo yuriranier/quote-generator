@@ -14,6 +14,7 @@ body {
   font-weight: 400;
   text-align: center;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -55,7 +56,7 @@ body {
   justify-content: space-between;
 }
 
-button {
+.inside-button {
   cursor: pointer;
   font-size: 1.2rem;
   height: 2.5rem;
@@ -68,11 +69,11 @@ button {
   box-shadow: 0 0.3rem rgba(121, 121, 121, 0.65);
 }
 
-button:hover {
+.inside-button:hover {
   filter: brightness(150%);
 }
 
-button:active {
+.inside-button:active {
   transform: translate(0, 0.3rem);
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
@@ -83,6 +84,29 @@ button:active {
 
 .fa-twitter {
   font-size: 1.5rem;
+}
+
+/* Github link */
+
+.github-button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #000;
+  position: absolute;
+  bottom: 20px;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.github-button:hover {
+  background-color: rgb(121, 121, 121);
+}
+
+.github-button a {
+  color: #f3f3f3;
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
 }
 
 /* Loader */
@@ -117,9 +141,16 @@ button:active {
 
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 500px) {
+  body {
+    padding: 30px;
+  }
   .quote-container {
-    margin: 30px;
+    margin: 0;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.6);
+  }
+  .github-button {
+    position: unset;
+    margin-top: 30px;
   }
 }
